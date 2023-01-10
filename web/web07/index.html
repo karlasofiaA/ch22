@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Inicio del programa de la sesion WEB07");
+    </script>
+</head>
+<body>
+    <h1 class="example"> Sesión WEB07 </h1>
+    <p class="example" id="parrafo"> Hola Crayoli </p>
+    <br>
+    <h3 class="example" id="demo" onclick="changeColor()"> Click sobre este texto para cambiar el color. </h3>
+    <h2 id="color-h2" onclick="changeColorH2(this, 'blue')"> Hola, casi es viernes </h2>
+    <!-- Agregamos un botón que cambia el color de una clase -->
+    <button onclick="changeColorByClass('yellow')"> Amarillo </button>
+    <br>
+    <!-- Agregamos otro botón que cambia la letra a rosa -->
+    <button onclick="changeColorByClass('pink')"> Rosa </button> 
+    <br>
+    <button onclick="changeColorByClass('olive')"> Olive </button>
+    <br>
+    <button onclick="changeColorByClass('red')"> Rojo </button>
+    
+
+
+    <!-- El script se recomienda ponerlo al final del codigo -->
+    <script>
+        document.getElementById("parrafo").innerHTML = "Uso de la API DOM";
+    </script>
+    <!-- Con un script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
