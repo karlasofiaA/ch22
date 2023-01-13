@@ -174,7 +174,7 @@ switch (numMes) {
 console.log(`En ${mes} la estación del año es ${estacion}`);
 }
 //UTILIZANDO ELSE IF
-let numMes = Number(prompt('Numero del mes'));
+let numMes = 1;//Number(prompt('Numero del mes'));
 let estacion = '';
 let mes = '';
 
@@ -204,3 +204,17 @@ if(numMes === 12 || numMes === 1 || numMes === 2){
 }
 
 console.log(`En ${mes} la estación del año es ${estacion}`);
+
+//---------Refactorizar el siguiente código usando un operador ternario
+/* function factorial( number ){
+    if( number < 1) 
+        return 1;
+    return number * factorial( number - 1 )
+}
+console.log("Factorial 5 = " + factorial(5) ); //120 */
+
+function factorial( number ){
+    return number < 1 ? 1 : number * factorial( number - 1 )
+}
+console.log('El factorial de 5 = ' + factorial (5));
+
