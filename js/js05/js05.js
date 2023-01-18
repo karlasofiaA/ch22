@@ -66,7 +66,7 @@ do {
 console.log("Resultado final: " + respuestasExamen)
 
 let nivelSuenio = 99;
-if( nivelSuenio++ === 100 ) console.log("Me voy a mimir en la sesión");
+if (nivelSuenio++ === 100) console.log("Me voy a mimir en la sesión");
 console.log("Nivel de sueño " + nivelSuenio);
 
 //Operadores relacionales
@@ -78,7 +78,7 @@ console.log("Nivel de sueño " + nivelSuenio);
  */
 
 let numPerfumes = 10;
-if( numPerfumes >= 10 ) console.log("Que elegancia la de francia");
+if (numPerfumes >= 10) console.log("Que elegancia la de francia");
 
 //Operadores de igualdad
 /* 
@@ -88,9 +88,9 @@ if( numPerfumes >= 10 ) console.log("Que elegancia la de francia");
     !== estrictamente diferente que
 */
 let numMatriculaPavel = "10025";
-if( numMatriculaPavel == 10025 ) console.log("Pavel está aprobado")
-if( numMatriculaPavel === 10025 ) console.log("Pavel está en nivel fase 5");
-if( numMatriculaPavel >= 10025 ) console.log("Pavel está en CUCEI");
+if (numMatriculaPavel == 10025) console.log("Pavel está aprobado")
+if (numMatriculaPavel === 10025) console.log("Pavel está en nivel fase 5");
+if (numMatriculaPavel >= 10025) console.log("Pavel está en CUCEI");
 
 //Operadores lógicos
 /* 
@@ -100,10 +100,10 @@ if( numMatriculaPavel >= 10025 ) console.log("Pavel está en CUCEI");
     Primero se evalúa el operador AND antes que el OR
 */
 let numRebosos = 3;
-let teGustaReboso = true; 
-if(numRebosos > 5 || teGustaReboso ) console.log("Te regalo un reboso de Oaxaca");
+let teGustaReboso = true;
+if (numRebosos > 5 || teGustaReboso) console.log("Te regalo un reboso de Oaxaca");
 let vivesEnElExtranjero = true;
-if(numRebosos > 5 || teGustaReboso && vivesEnElExtranjero) console.log("Te vendo mi reboso en dólares");
+if (numRebosos > 5 || teGustaReboso && vivesEnElExtranjero) console.log("Te vendo mi reboso en dólares");
 
 //Operadores de corto circuito
 /*  
@@ -116,19 +116,55 @@ console.log("Respuesta " + respuesta);
 
 let edadPersona = 18;
 mensaje = "puede votar";
-console.log("La persona puede votar " + (edadPersona>=18 && mensaje));
+console.log("La persona puede votar " + (edadPersona >= 18 && mensaje));
 
 /*  
-Operador1 || Operador2  si  Operador1=true, se realiza el resultado de Operador 1
+Operador1 || Operador2  si  Operador1=true, se realiza el resultado de Operador 1 solamente. Si Operador1=false, se realiza el resultado de Operador2. 
  */
 let isOnline = true;
 let isActive = true;
-if( isOnline ){
-    if( isActive )
-    console.log("Estamos in")
+if (isOnline) {
+    if (isActive)
+        console.log("Estamos autorizados")
 }
 
-if( isOnline && isActive )
-    console.log("Estamos in");
+if (isOnline && isActive)
+    console.log("Estamos autorizados");
 
-    isOnline && isActive && console.log("Estamos in");
+isOnline && isActive && console.log("Estamos autorizados");
+
+let edadMiSobrina = 15;
+console.log( edadMiSobrina > 18 && "Puede votar" );
+
+let numeroQuesadillasAComer = "3";
+let guisado = "Huitlacoche";
+
+console.log("Montse comera quesadilla de: " + (numeroQuesadillasAComer&&guisado));
+
+let nombreConductor = "Pax";
+let tieneLicenciaConducir = true;
+let edadConductor = 50;
+
+const seRentaAuto = nombreConductor && tieneLicenciaConducir && edadConductor<60 
+console.log("Resultado = " + seRentaAuto); //true
+
+const datosQuesadilla = {
+    tortilla : "maiz",
+    tieneQueso : true,
+    pica : "poquito"
+}
+
+const picaLaQuesadilla = datosQuesadilla.pica && "Pica mucho";
+console.log(picaLaQuesadilla)
+
+/*  OPERADORES DE CORTO CIRCUITO EJERCICIOS EN CONSOLA
+"Poquito" && "Pica Mucho"
+18 && true && "Hola"; // "Hola"
+"Poquito" || "Pica mucho" //"Poquito"
+"Poquito" || "Pica Mucho" && "Ni pica"
+false || "Pica Mucho" && "Ni pica" //"Ni pica"
+
+18 || false || "Hola" && "1023"; // 18
+((0 || (!false)) || ("Hola" && "1023")); //1023
+
+*/
