@@ -204,16 +204,3 @@ if(numMes === 12 || numMes === 1 || numMes === 2){
 }
 
 console.log(`En ${mes} la estación del año es ${estacion}`);
-
-//---------Refactoriza de la siguiente función 
-/* function factorial( number ){
-    if( number < 1) 
-        return 1;
-    return number * factorial( number - 1 )
-}
-console.log("Factorial 5 = " + factorial(5) ); //120 */
-
-function factorial( number ){
-    return number < 1 ? 1 : number * factorial( number - 1 )
-}
-console.log("Factorial 5 = " + factorial(5) ); //120
